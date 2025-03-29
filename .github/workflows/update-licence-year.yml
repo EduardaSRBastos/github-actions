@@ -9,6 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Update License Year Action
-        uses: EduardaSRBastos/update-license-year-action@v1
+        uses: EduardaSRBastos/update-license-year-action@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
