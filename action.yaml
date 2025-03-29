@@ -3,8 +3,8 @@ description: 'A GitHub Action to update the license year in repositories'
 author: 'Eduarda Bastos'
 
 branding:
-  icon: sunrise
-  color: yellow
+  icon: 'award'
+  color: 'yellow'
 
 inputs:
   github_token:
