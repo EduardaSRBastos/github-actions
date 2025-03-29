@@ -1,4 +1,4 @@
-name: 'Update License Year'
+name: 'Update License Year GitHub Action'
 description: 'A GitHub Action to update the license year in repositories'
 author: 'Eduarda Bastos'
 
