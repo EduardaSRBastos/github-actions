@@ -5,10 +5,10 @@ on:
   workflow_dispatch:
 
 jobs:
-  update-license:
+  update-license-year:
     runs-on: ubuntu-latest
     steps:
       - name: Update License Year Action
-        uses: EduardaSRBastos/github-actions/update-license-year/action@main
+        uses: EduardaSRBastos/github-actions/update-license-year@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
