@@ -1,69 +1,58 @@
 <div align="center">
   
-# My GitHub Actions
-[![GitHub License](https://img.shields.io/github/license/EduardaSRBastos/github-actions?style=plastic&color=darkred)](https://github.com/EduardaSRBastos/github-actions?tab=MIT-1-ov-file)
-[![GitHub branch check runs](https://img.shields.io/github/check-runs/EduardaSRBastos/github-actions/main?style=plastic)](https://github.com/EduardaSRBastos/github-actions/actions)
-[![GitHub repo size](https://img.shields.io/github/repo-size/EduardaSRBastos/github-actions?style=plastic)](https://github.com/EduardaSRBastos/github-actions)
-
-<p><i>A collection of GitHub Actions.</i></p>
-
- </div>
-
----
-
-## Table of Contents
-- [Update License Year Action](#update-license-year-action)
-  - [Features](#features)
-  - [How to Use](#how-to-use)
-  - [Manual Trigger](#manual-trigger)
-- [Contributing](#contributing)
-- [License](#license)
-
----
-
-## Update License Year Action
+# Update License Year Action
+[![GitHub License](https://img.shields.io/github/license/EduardaSRBastos/update-license-year-action?style=plastic&color=darkred)](https://github.com/EduardaSRBastos/update-license-year-action?tab=MIT-1-ov-file)
+[![GitHub branch check runs](https://img.shields.io/github/check-runs/EduardaSRBastos/update-license-year-action/main?style=plastic)](https://github.com/EduardaSRBastos/update-license-year-action/actions)
+[![GitHub repo size](https://img.shields.io/github/repo-size/EduardaSRBastos/update-license-year-action?style=plastic)](https://github.com/EduardaSRBastos/update-license-year-action)
 
 <p><i>This GitHub Action automatically updates the year in the `LICENSE` file of the repository.</i></p>
 
-- ### Features
+ </div>
 
-  - Updates the year in the `LICENSE` file to the current year.
-  - Commits and pushes the change automatically.
-  - Skips execution if no `LICENSE` file is found.
-  - Runs automatically on January 1st every year or manually when triggered.
+## Table of Contents
+- [Features](#features)
+- [How to Use](#how-to-use)
+- [Manual Trigger](#manual-trigger)
+- [Contributing](#contributing)
+- [License](#license)
 
-- ### How to Use
+ ### Features
 
-  - #### 1. Create a Workflow File
+- Updates the year in the `LICENSE` file to the current year.
+- Commits and pushes the change automatically.
+- Skips execution if no `LICENSE` file is found.
+- Runs automatically on January 1st every year or manually when triggered.
 
-    Add the following file `.github/workflows/update-license-year.yaml` in your repository:
+### How to Use
 
-    ```yaml
-    name: Update License Year
-    on:
-      schedule:
-        - cron: '0 0 1 1 *'  # Runs every January 1st
-      workflow_dispatch:  # Allows manual trigger
+#### 1. Create a Workflow File
 
-    jobs:
-      update-license-year:
-        runs-on: ubuntu-latest
-        steps:
-          - name: Update License Year Action
-            uses: EduardaSRBastos/github-actions/update-license-year@main
-            with:
-              github_token: ${{ secrets.GITHUB_TOKEN }}
-    ```
+Add the following file `.github/workflows/update-license-year.yaml` in your repository:
 
-- ### Manual Trigger
+```yaml
+name: Update License Year
+on:
+  schedule:
+    - cron: '0 0 1 1 *'  # Runs every January 1st
+  workflow_dispatch:  # Allows manual trigger
 
-    To manually trigger the workflow:
+jobs:
+  update-license-year:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update License Year Action
+        uses: EduardaSRBastos/update-license-year-action/update-license-year@main
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+```
 
-    1. Go to **GitHub → Your Repository → Actions**.
-    2. Select **"Update License Year"** workflow.
-    3. Click **"Run Workflow"**.
+### Manual Trigger
 
----
+To manually trigger the workflow:
+
+1. Go to **GitHub → Your Repository → Actions**.
+2. Select **"Update License Year"** workflow.
+3. Click **"Run Workflow"**.
 
 ## Contributing
 - Support this project by giving it a star ⭐. Thanks!
