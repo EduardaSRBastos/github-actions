@@ -1,0 +1,16 @@
+name: 'Update License Year'
+description: 'A GitHub Action to update the license year in repositories'
+author: 'Eduarda Bastos'
+inputs:
+  github_token:
+    description: 'GitHub token to push changes'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Update License Year
+      run: bash ${{ github.action_path }}/script.sh
+      shell: bash
