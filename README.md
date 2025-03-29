@@ -12,7 +12,7 @@
  <br>
 
 ## Table of Contents
-- [Update License Year GitHub Action](#update-license-year-github-action)
+- [Update License Year Action](#update-license-year-action)
   - [Features](#features)
   - [How to Use](#how-to-use)
   - [Manual Trigger](#manual-trigger)
@@ -20,7 +20,7 @@
 
 <br>
 
-## Update License Year GitHub Action
+## Update License Year Action
 
 <p><i>This GitHub Action automatically updates the year in the `LICENSE` file of the repository.</i></p>
 
