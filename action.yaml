@@ -1,10 +1,16 @@
 name: 'Update License Year'
 description: 'A GitHub Action to update the license year in repositories'
 author: 'Eduarda Bastos'
+
+branding:
+  icon: sunrise
+  color: yellow
+
 inputs:
   github_token:
     description: 'GitHub token to push changes'
     required: true
+
 runs:
   using: 'composite'
   steps:
